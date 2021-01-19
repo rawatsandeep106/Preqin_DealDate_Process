@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>814,2452</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1126,2583</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PreqinDD_GoogleSearchResults_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -63,7 +63,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PreqinDD_GoogleSearchResults" sap:VirtualizedContainerService.HintSize="536,2247" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PreqinDD_GoogleSearchResults" sap:VirtualizedContainerService.HintSize="536,2378" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ResultedURLsDT" />
     </Sequence.Variables>
@@ -119,32 +119,32 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <Sequence DisplayName="Scraping the URLs" sap:VirtualizedContainerService.HintSize="494,590" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Scraping the URLs" sap:VirtualizedContainerService.HintSize="494,721" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Heartland Page'" sap:VirtualizedContainerService.HintSize="452,498" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8d3883e946219d9ddb8347407c25fb56" Selector="&lt;html app='*e.exe' title='*Google Search' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Heartland Page'" sap:VirtualizedContainerService.HintSize="452,629" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8d3883e946219d9ddb8347407c25fb56" Selector="&lt;html app='*e.exe' title='*Google Search' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="418,352" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence sap:VirtualizedContainerService.HintSize="418,483" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExtractData ContinueOnError="True" DataTable="[ResultedURLsDT]" DelayBetweenPagesMS="1000" DisplayName="Extract Structured Data 'DIV  rso'" ExtractMetadata="&lt;extract&gt;&lt;column exact=&quot;1&quot; name=&quot;URL&quot; attr=&quot;href&quot;&gt;&lt;webctrl tag='div' class='g'/&gt;&lt;webctrl tag='div' class='rc' idx='1'/&gt;&lt;webctrl tag='div' class='r' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' class='LC20lb DKV0Md' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='Next' parentid='pnnext' tag='SPAN' /&gt;" SimulateClick="True">
+                <ui:ExtractData ContinueOnError="True" DataTable="[ResultedURLsDT]" DelayBetweenPagesMS="1000" DisplayName="Extract Structured Data 'DIV  rso'" ExtractMetadata="&lt;extract&gt;&lt;column attr='href' name='URL' exact='1'&gt;&lt;webctrl tag='div' class='g' /&gt;&lt;webctrl tag='div' class='tF2Cxc' idx='1' /&gt;&lt;webctrl tag='div' class='yuRUbf' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h3' class='LC20lb DKV0Md' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='Next' parentid='pnnext' tag='SPAN' /&gt;" SimulateClick="True">
                   <ui:ExtractData.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e119d161-6209-4c05-b3a3-c5141c98e0da" InformativeScreenshot="bdad076c4e15535f9282e78c2bed70b6" Selector="&lt;webctrl id='rso' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
@@ -153,6 +153,7 @@
                     </ui:Target>
                   </ui:ExtractData.Target>
                 </ui:ExtractData>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Total Links found on Google : &quot;+ResultedURLsDT.Rows.Count.ToString]" />
               </Sequence>
               <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
             </Sequence>
